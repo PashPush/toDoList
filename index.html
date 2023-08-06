@@ -8,18 +8,21 @@
         
         <script>
           
-          let array = ['TODO LIST\n'];
+          let array = [];
 
 
           function toDo () {
             let cicle = true;
+            let counter = 0;
 
             while (cicle) {
-            let choice = prompt("Enter 1 to ADD or 2 to SHOW THE LIST", "");
-            
+            let choice = prompt(`To ADD smth enter 1\nTo DELETE smth enter 2\nTo SHOW THE LIST enter 3`, "");
+            let showList = array.reduce((total, value, index) => 
+                    total + `to do #${index + 1}: ${value} \n`, 'TODO LIST:\n');
+            let response;
               if (choice == 1) {
                 while (true) {
-                  let response = prompt("Enter what to ADD", "");
+                    response = prompt("Enter what to ADD", "");
                     if (response == null || response == ''){
                       break;
                     }
@@ -28,16 +31,32 @@
                     }
                 }
               }
-              
               else if (choice == 2) {
+                while (counter < 1000) {
+                    response = prompt(`WHAT number to DELETE?\n ${showList}`, '');
+                    if (response == null || response == ''){
+                      break;
+                    }
+                    else if (isNaN(+response)) {
+                      response = alert('Enter a number!');
+                    }
+                    else {
+                      array.splice(+response - 1, 1);
+                    }
+                    counter++;
+                    showList = array.reduce((total, value, index) => 
+                      total + `to do #${index + 1}: ${value} \n`, 'TODO LIST:\n');
+              }
+            }
+              else if (choice == 3) {
               // for (let i = 0; i < array.length; i++) {
-                  alert(array.reduce((total, value, index) => 
-                    total + `to do #${index}: ${value} \n`), '');
+                  alert(showList);
               //  }
               }
               else {
                 cicle = false;
               }
+              counter = 0;
             }
           }
           toDo();

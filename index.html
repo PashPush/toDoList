@@ -4,56 +4,44 @@
         <meta charset="UTF-8" />
         <title>ToDo List</title>
         <link href="style.css" type="text/css" rel="stylesheet" />
-        <link href="script.js" type="javascript" />
+        <script src="script.js"></script>
         
         <script>
-          
-          let array = ['TODO LIST\n'];
-
-
-          function toDo () {
-            let cicle = true;
-
-            while (cicle) {
-            let choice = prompt("Enter 1 to ADD or 2 to SHOW THE LIST", "");
-            
-              if (choice == 1) {
-                while (true) {
-                  let response = prompt("Enter what to ADD", "");
-                    if (response == null || response == ''){
-                      break;
-                    }
-                    else {
-                      array.push(response);
-                    }
-                }
-              }
-              
-              else if (choice == 2) {
-              // for (let i = 0; i < array.length; i++) {
-                  alert(array.reduce((total, value, index) => 
-                    total + `to do #${index}: ${value} \n`), '');
-              //  }
-              }
-              else {
-                cicle = false;
-              }
-            }
-          }
-          toDo();
-
+          // toDo();
         </script>
     </head>
     <body>
-     <!-- <section id="main">
-        <form action="">
-          <label >
-            Add to the list
+      <div id="main">
+        
+        <div id="addPart">
+          <h2>Add to the list:</h2>
+          <form action="">
             <input type="text" placeholder="I need to do..." name="newDo" id="newDo"/>
-          </label>
-          <input type="submit" value="Add"/>
-        </form>
-      </section> -->
+            <input type="submit" value="Add"/>
+          </form>
+        </div>
+
+        <div id="showPart">
+          <h2>TO DO LIST:</h2>
+          <ol>
+            <li>Go to buy milk<span class="delete">x</span></li>
+            <li>Kill annoing fly<span class="delete">x</span></li>
+            <li>Eat an ice-cream<span class="delete">x</span></li>
+            <li>Something else<span class="delete">x</span></li>
+          </ol>
+        </div>
+
+        <div id="historyPart">
+          <h3>All you've already done:</h3>
+          <ul>
+            <li>Some trifle</li>
+            <li>Real project</li>
+            <li>One more thing</li>
+          </ul>
+          <p id="clear">Clear History</p>
+        </div>
+
+      </div> 
 
     </body>
 </html>

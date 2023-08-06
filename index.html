@@ -8,7 +8,7 @@
         
         <script>
           
-          let array = [];
+          let array = ['TODO LIST\n'];
 
 
           function toDo () {
@@ -31,7 +31,8 @@
               
               else if (choice == 2) {
               // for (let i = 0; i < array.length; i++) {
-                  alert(array);
+                  alert(array.reduce((total, value, index) => 
+                    total + `to do #${index}: ${value} \n`), '');
               //  }
               }
               else {

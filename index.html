@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ToDo List</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+        <link href="script.js" type="javascript" />
+        
+        <script>
+          
+          let array = [];
+
+
+          function toDo () {
+            let cicle = true;
+
+            while (cicle) {
+            let choice = prompt("Enter 1 to ADD or 2 to SHOW THE LIST", "");
+            
+              if (choice == 1) {
+                while (true) {
+                  let response = prompt("Enter what to ADD", "");
+                    if (response == null || response == ''){
+                      break;
+                    }
+                    else {
+                      array.push(response);
+                    }
+                }
+              }
+              
+              else if (choice == 2) {
+              // for (let i = 0; i < array.length; i++) {
+                  alert(array);
+              //  }
+              }
+              else {
+                cicle = false;
+              }
+            }
+          }
+          toDo();
+
+        </script>
+    </head>
+    <body>
+     <!-- <section id="main">
+        <form action="">
+          <label >
+            Add to the list
+            <input type="text" placeholder="I need to do..." name="newDo" id="newDo"/>
+          </label>
+          <input type="submit" value="Add"/>
+        </form>
+      </section> -->
+
+    </body>
+</html>

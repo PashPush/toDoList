@@ -10,31 +10,42 @@
     <body>
       <div id="main">
         
-        <div id="addPart">
+        <div class="container" id="addPart">
           <h2>Add to the list:</h2>
           <form action="">
             <input type="text" placeholder="I need to do..." name="newDo" id="newDo"/>
-            <input type="submit" value="Add"/>
+            <input type="submit" value="ADD" class="button"/>
           </form>
         </div>
 
-        <div id="showPart">
+        <div class="container" id="showPart">
           <h2>TO DO LIST:</h2>
           <ol>
-            <li>Go to buy milk<span class="delete">x</span></li>
-            <li>Kill annoing fly<span class="delete">x</span></li>
-            <li>Eat an ice-cream<span class="delete">x</span></li>
-            <li>Something else<span class="delete">x</span></li>
+            <li>Go to buy milk<span class="delete">x</span><span class="checked">✓</span></li>
+            <li>Kill annoing fly<span class="delete">x</span><span class="checked">✓</span></li>
+            <li>Eat an ice-cream<span class="delete">x</span><span class="checked">✓</span></li>
+            <li>Something else<span class="delete">x</span><span class="checked">✓</span></li>
           </ol>
         </div>
 
-        <div id="historyPart">
-          <h3>All you've already done:</h3>
-          <ul>
-            <li>Some trifle</li>
-            <li>Real project</li>
-            <li>One more thing</li>
-          </ul>
+        <div class="container" id="historyPart">
+          <h3>All you've done:</h3>
+          <h3>All Deleted:</h3>
+
+          <div class="flapDone">
+            <ul>
+              <li>Some trifle</li>
+              <li>Real project</li>
+              <li>One more thing</li>
+            </ul>
+          </div>
+          <div class="flapDeleted">
+            <ul>
+              <li>Deleted stuff</li>
+              <li>Crap</li>
+              <li>One more junk</li>
+            </ul>
+          </div>
           <p id="clear">Clear History</p>
         </div>
 

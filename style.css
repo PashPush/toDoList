@@ -1,6 +1,93 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
+
+body {
+    margin: 0;
+}
+
+h2, h3 {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 16px;
+}
+
 #main {
-    padding: 40px;
+    padding: 20px;
+    background-color: #76daff;
 }
+
+.container {
+    width: 360px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #50d2ff;
+    background-color: #2cb0e1;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+}
+
+form {
+    display: grid;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    outline: none;
+    color: #222;
+}
+
+.button {
+    width: 270px;
+    padding: 10px;
+    border: none;
+    background-color: #50d2ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px auto;
+    
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #078ebf;
+}
+
+
+li {
+    margin: 10px;
+    padding: 5px;
+}
+
+li:nth-child(2n){
+    background-color: #078ebf;
+}
+
+li span {
+    
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0px 10px 30px;
+}
+
+.delete {
+    color: rgb(230, 77, 77);
+}
+
+.checked {
+    color: rgb(8, 232, 27);
+}
+
